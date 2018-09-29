@@ -8,6 +8,7 @@
 	var defaultGuessesRemaining = 9;
 	var guessesRemainingCount = defaultGuessesRemaining;
 	var guessesArray = [];
+	
 	var getRandomLetter = function () {
 		randomLetter = allLetters[Math.floor(Math.random()*allLetters.length)]
 		console.log(randomLetter);
@@ -30,9 +31,7 @@
 	var userLost = function () {
 		return guessesRemainingCount === 0;
 	}
-	var winningpic = function () {
-		
-	} 
+
 	var currentLetter = getRandomLetter();
 	displayStats();
 	document.onkeyup = function (event) {

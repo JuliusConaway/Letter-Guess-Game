@@ -9,7 +9,7 @@
 	var guessesRemainingCount = defaultGuessesRemaining;
 	var guessesArray = [];
 	
-	var getRandomLetter = function () {
+		var getRandomLetter = function () {
 		randomLetter = allLetters[Math.floor(Math.random()*allLetters.length)]
 		console.log(randomLetter);
 		return randomLetter
@@ -48,6 +48,13 @@
 		}
 		displayStats();
 	}
-        
-    
+    window.onkeypress = function move() {
+		var element = document.getElementById("pictures");
+		element.style.top = parseInt(element.style.top) + 50 + "px" 
+	
+		}    
+    function move() {
+		getElementById("pictures");
+		reset(1000);
+	}
     

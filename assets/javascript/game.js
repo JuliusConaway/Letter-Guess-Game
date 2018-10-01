@@ -8,7 +8,8 @@
 	var defaultGuessesRemaining = 9;
 	var guessesRemainingCount = defaultGuessesRemaining;
 	var guessesArray = [];
-	
+	var movePictures = [];
+	var userLetter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];	
 		var getRandomLetter = function () {
 		randomLetter = allLetters[Math.floor(Math.random()*allLetters.length)]
 		console.log(randomLetter);
@@ -21,6 +22,8 @@
 		guessesSoFar.innerHTML = "Your Guesses So Far: " + guessesArray
 	}
 	var resetGame = function () {
+		var element = document.getElementById("pictures");
+		element.style.top = parseInt(element.style.top) + "10px";
 		guessesArray = [];
 		guessesRemainingCount = defaultGuessesRemaining;
 		currentLetter = getRandomLetter();
@@ -34,6 +37,7 @@
 
 	var currentLetter = getRandomLetter();
 	displayStats();
+
 	document.onkeyup = function (event) {
 		var userLetter = event.key;
 		guessesRemainingCount--
@@ -48,13 +52,3 @@
 		}
 		displayStats();
 	}
-    window.onkeypress = function move() {
-		var element = document.getElementById("pictures");
-		element.style.top = parseInt(element.style.top) + 50 + "px" 
-	
-		}    
-    function move() {
-		getElementById("pictures");
-		reset(1000);
-	}
-    
